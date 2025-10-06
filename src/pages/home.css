@@ -1,0 +1,193 @@
+/* ====== General ====== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Container ====== */
+.container {
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* ====== Header ====== */
+.header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.addButton {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ====== Error & Loading ====== */
+.errorBanner {
+  padding: 12px;
+  background-color: #fee;
+  color: #c33;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ====== Products Grid ====== */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.productCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.productImage {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.imagePlaceholder {
+  font-size: 40px;
+}
+
+.productInfo {
+  text-align: center;
+}
+
+.productName {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.productPrice {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4caf50;
+  margin-bottom: 12px;
+}
+
+.productMeta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.metaLabel {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.button {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.emptyState {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+/* ====== Dialog Box ====== */
+.dialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogBox {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dialogTitle {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dialogBox input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.dialogActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: 10px 16px;
+  background: #ddd;
+  border: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* ====== Button Hover Effects ====== */
+button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: scale(0.98);
+}
