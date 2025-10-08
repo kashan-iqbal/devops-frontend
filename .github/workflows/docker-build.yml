@@ -27,6 +27,7 @@ jobs:
           context: .
           push: true
           tags: kashan33/frontend:latest
+          no-cache: true
 
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v1.0.0
@@ -39,6 +40,9 @@ jobs:
 
             echo "🛑 Stopping running containers..."
             docker-compose down
+
+            echo "🛑 cleaning the cache"
+            docker image prune -a -f
 
             echo "⬇️ Pulling latest image from Docker Hub..."
             docker-compose pull

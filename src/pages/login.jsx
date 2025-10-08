@@ -26,7 +26,7 @@ export default function LoginPage() {
     try {
       setLoading(true);
       const url = `${import.meta.env.VITE_BACKEND_URL}/api/auth/api/auth/login`;
-      console.log(url, `host`, import.meta.VITE_BACKEND_URL);
+      console.log(url, `host`, import.meta.env.VITE_BACKEND_URL);
       const response = await fetch(
         `${import.meta.env.VITE_BACKEND_URL}/api/auth/api/auth/login`,
         {
