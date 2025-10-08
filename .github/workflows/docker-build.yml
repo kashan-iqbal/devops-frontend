@@ -28,14 +28,20 @@ jobs:
           push: true
           tags: kashan33/frontend:latest
 
-      # - name: SSH into EC2 and deploy
-      #   uses: appleboy/ssh-action@v1.0.0
-      #   with:
-      #     host: ${{ secrets.EC2_HOST }}
-      #     username: ubuntu
-      #     key: ${{ secrets.EC2_SSH_KEY }}
-      #     script: |
-      #       cd ~/infra-deploy
-      #       git pull origin main
-      #       docker-compose pull
-      #       docker-compose up -d
+      - name: SSH into EC2 and deploy
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/infra-deploy
+
+            echo "🛑 Stopping running containers..."
+            docker-compose down
+
+            echo "⬇️ Pulling latest image from Docker Hub..."
+            docker-compose pull
+
+            echo "🚀 Starting containers..."
+            docker-compose up -d

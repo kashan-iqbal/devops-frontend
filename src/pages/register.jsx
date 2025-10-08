@@ -39,7 +39,7 @@ export default function RegisterPage() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost/api/auth/api/auth/register",
+        `${import.meta.env.backendurl}/api/auth/api/auth/register`,
         {
           method: "POST",
           headers: {

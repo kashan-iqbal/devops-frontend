@@ -24,7 +24,7 @@ export default function ProductsPage() {
       }
 
       const response = await fetch(
-        "http://localhost/api/products/api/products",
+        `${import.meta.env.backendurl}/api/products/api/products`,
         {
           method: "GET",
           headers: {
@@ -71,7 +71,7 @@ export default function ProductsPage() {
       }
 
       const response = await fetch(
-        "http://localhost/api/products/api/products",
+        `${import.meta.env.backendurl}/api/products/api/products`,
         {
           method: "POST",
           headers: {

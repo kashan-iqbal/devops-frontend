@@ -26,13 +26,16 @@ export default function LoginPage() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost/api/auth/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        `${import.meta.env.backendurl}/api/auth/api/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
       console.log(response);
       if (!response.ok) {
         const errData = await response.json();
