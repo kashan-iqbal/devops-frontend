@@ -39,7 +39,7 @@ export default function RegisterPage() {
       setLoading(true);
 
       const response = await fetch(
-        `${import.meta.env.backendurl}/api/auth/api/auth/register`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/auth/api/auth/register`,
         {
           method: "POST",
           headers: {
