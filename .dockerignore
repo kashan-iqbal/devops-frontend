@@ -13,6 +13,5 @@ out
 build
 tmp
 .cache
-.env*
 .vscode
 *.md

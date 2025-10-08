@@ -37,7 +37,10 @@ export default function RegisterPage() {
 
     try {
       setLoading(true);
-
+      const url = `${
+        import.meta.env.VITE_BACKEND_URL
+      }/api/auth/api/auth/register`;
+      console.log(url, `origin`, import.meta.env.VITE_BACKEND_URL);
       const response = await fetch(
         `${import.meta.env.VITE_BACKEND_URL}/api/auth/api/auth/register`,
         {
