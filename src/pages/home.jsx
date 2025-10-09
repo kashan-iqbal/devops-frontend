@@ -24,7 +24,7 @@ export default function ProductsPage() {
       }
 
       const response = await fetch(
-        `${import.meta.env.backendurl}/api/products/api/products`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/products/api/products`,
         {
           method: "GET",
           headers: {
