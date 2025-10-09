@@ -15,12 +15,6 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Set VITE_BACKEND_URL env file
-        run: |
-          echo "VITE_BACKEND_URL=${{ secrets.VITE_BACKEND_URL }}" > .env
-          echo "🧪 Using VITE_BACKEND_URL:"
-          cat .env
-
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
